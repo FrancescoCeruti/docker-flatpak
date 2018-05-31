@@ -1,6 +1,13 @@
 FROM ubuntu:18.04
 
-RUN add-apt-repository -y ppa:alexlarsson/flatpak
+RUN apt-get update && sudo apt-get install -y \
+    software-properties-common \
+    python3-software-properties
+ && add-apt-repository -y \
+    ppa:alexlarsson/flatpak \
+ && sudo apt-get purge -y \
+    software-properties-common \
+    python3-software-properties
 RUN apt-get update && sudo apt-get install -y \
     flatpak \
     flatpak-builder \
