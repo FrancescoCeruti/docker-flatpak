@@ -19,6 +19,3 @@ RUN apt-get update && apt-get install -y \
     flatpak \
     flatpak-builder \
   && rm -rf /var/lib/apt/lists/*
-
-# Add flathub as remote
-RUN flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
