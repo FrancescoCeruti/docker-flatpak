@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
   && apt-get purge -y \
     software-properties-common \
     python3-software-properties \
-  && apt-get autoremove
+  && apt-get autoremove -y
 
 # Install flatpak
 RUN apt-get update && apt-get install -y \
