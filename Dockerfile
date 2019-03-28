@@ -19,4 +19,5 @@ RUN apt-get update && apt-get install -y \
     ostree \
     flatpak \
     flatpak-builder \
+    python3-venv \
   && rm -rf /var/lib/apt/lists/*
