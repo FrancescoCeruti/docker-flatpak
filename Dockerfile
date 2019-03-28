@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install flatpak
 RUN apt-get update && apt-get install -y \
+    ostree \
     flatpak \
     flatpak-builder \
   && rm -rf /var/lib/apt/lists/*
