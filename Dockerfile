@@ -21,3 +21,5 @@ RUN apt-get update && apt-get install -y \
     flatpak-builder \
     python3-venv \
   && rm -rf /var/lib/apt/lists/*
+
+RUN flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
